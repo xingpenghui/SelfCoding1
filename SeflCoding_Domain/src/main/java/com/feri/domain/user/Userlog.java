@@ -19,7 +19,7 @@ public class Userlog extends BaseEntity{
 
     private LocalDateTime createtime;
 
-    private String uid;
+    private int uid;
 
     public Long getId() {
         return id;
@@ -45,10 +45,12 @@ public class Userlog extends BaseEntity{
     public void setCreatetime(LocalDateTime createtime) {
         this.createtime = createtime;
     }
-    public String getUid() {
+
+    public int getUid() {
         return uid;
     }
-    public void setUid(String uid) {
+
+    public void setUid(int uid) {
         this.uid = uid;
     }
 }

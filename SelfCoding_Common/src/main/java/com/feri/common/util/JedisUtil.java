@@ -45,6 +45,9 @@ public class JedisUtil {
     public Map<String,String> getMap(String key){
         return jedis.hgetAll(key);
     }
+    public String getMap(String key,String field){
+        return jedis.hget(key,field);
+    }
     public boolean checkFiled(String key,String field){
         return  jedis.hexists(key,field);
     }

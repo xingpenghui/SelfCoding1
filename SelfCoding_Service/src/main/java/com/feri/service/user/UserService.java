@@ -17,5 +17,6 @@ public interface UserService {
     ResultVO login(String phone,String password);
     //退出
    ResultVO loginout(String token);
-
+    //查询主页内容
+   ResultVO queryHome(String token);
 }
