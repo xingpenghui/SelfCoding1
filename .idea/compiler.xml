@@ -9,6 +9,7 @@
         <module name="SeflCoding_Domain" />
         <module name="SelfCoding_Common" />
         <module name="SelfCoding_Dao" />
+        <module name="SelfCoding_MQ" />
         <module name="SelfCoding_Service" />
       </profile>
     </annotationProcessing>

@@ -12,6 +12,12 @@
     <packaging>jar</packaging>
 
     <!--整个系统的映射类所在的项目  数据库表的映射类-->
-
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+        </dependency>
+    </dependencies>
     
 </project>

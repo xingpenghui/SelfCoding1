@@ -1,5 +1,7 @@
 package com.feri.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.feri.domain.base.BaseEntity;
 import java.time.LocalDateTime;
 /**
@@ -11,6 +13,7 @@ import java.time.LocalDateTime;
  * @since 2019-01-16
  */
 public class Userlog extends BaseEntity{
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     private Integer type;

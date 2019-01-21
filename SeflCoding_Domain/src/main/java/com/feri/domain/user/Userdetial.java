@@ -10,6 +10,7 @@ public class Userdetial extends BaseEntity{
 
     private static final long serialVersionUID = 1L;
 
+
     private Integer uid;
 
     private String nickname;

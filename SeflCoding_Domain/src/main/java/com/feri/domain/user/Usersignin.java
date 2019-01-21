@@ -1,5 +1,7 @@
 package com.feri.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.feri.domain.base.BaseEntity;
 import java.time.LocalDateTime;
 
@@ -14,7 +16,7 @@ import java.time.LocalDateTime;
 public class Usersignin extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     private Integer uid;

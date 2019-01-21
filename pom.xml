@@ -12,6 +12,7 @@
         <module>SelfCoding_Dao</module>
         <module>SelfCoding_Common</module>
         <module>SelfCoding_Service</module>
+        <module>SelfCoding_MQ</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,5 +1,7 @@
 package com.feri.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.feri.domain.base.BaseEntity;
 
 /**
@@ -11,9 +13,6 @@ import com.feri.domain.base.BaseEntity;
  * @since 2019-01-16
  */
 public class Userwallet extends BaseEntity {
-
-    private static final long serialVersionUID = 1L;
-
     private Integer uid;
 
     private Integer totalshell;

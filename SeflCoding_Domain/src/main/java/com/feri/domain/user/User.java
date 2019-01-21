@@ -1,5 +1,7 @@
 package com.feri.domain.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.feri.domain.base.BaseEntity;
 
 /**
@@ -7,6 +9,8 @@ import com.feri.domain.base.BaseEntity;
  *@Date Created in 2019/1/15 09:35
  */
 public class User extends BaseEntity {
+
+    @TableId(value = "id", type = IdType.AUTO)
     private int id;
     private String phone;
     private String password;
