@@ -3,6 +3,7 @@ package com.feri.service.video;
 import com.feri.common.qo.QueryParam;
 import com.feri.common.vo.PageVo;
 import com.feri.common.vo.ResultVO;
+import com.feri.domain.user.Userappraise;
 import com.feri.domain.video.Video;
 import com.feri.domain.video.Videocourse;
 /**
@@ -20,11 +21,21 @@ public interface VideoService {
     PageVo<Videocourse> queryByPage(QueryParam queryParam);
     //新增视频
     ResultVO saveVideo(Video video);
+
     //查询课程下的所有视频
     ResultVO queryByCourse(int vcid);
+    //查询具体的视频
+    ResultVO queryByVid(int vid);
 
     //查询主页显示的内容  最新更新 大家喜欢（播放量） 热销榜单（购买量）
     ResultVO queryIndex();
+
+    //查询该视频下的所有的评价内容
+    PageVo<Userappraise> queryAppraise(QueryParam queryParam);
+
+    //查询该视频专题的所有的评价内容
+    PageVo<Userappraise> queryVCAppraise(QueryParam queryParam);
+
 
 
 

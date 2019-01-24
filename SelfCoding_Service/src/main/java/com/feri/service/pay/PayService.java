@@ -1,5 +1,6 @@
 package com.feri.service.pay;
 
+import com.feri.common.qo.QueryParam;
 import com.feri.common.vo.PageVo;
 import com.feri.common.vo.ResultVO;
 import com.feri.domain.pay.Paycode;
@@ -15,7 +16,15 @@ import com.feri.domain.video.Videocourse;
 public interface PayService {
     //下单---订购视频课程
     ResultVO saveOrder(Userorder userorder);
-    //充值---涉及到支付
+    //充值--
+    ResultVO payPre(QueryParam param);
+    //查询我的订单
+    ResultVO myorders(String token);
+    //查询订单支付状态
+    ResultVO paystatus(String oid);
+
+
+    //保存支付二维码---涉及到支付
     ResultVO savePayCode(Paycode paycode);
     //充值回调---更细支付结果
     ResultVO updatePay(int oid,int flag);
@@ -25,6 +34,9 @@ public interface PayService {
     ResultVO queryCourse(String token);
     //我的消费清单
     ResultVO queryShell(String token);
+    //我的钱包
+    ResultVO querywallet(String token);
+
 
 
 

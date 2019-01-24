@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SelfCoding</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+
+<div class="container-fluid" id="divData">
+    <div class="row" style="margin-top: 10px;background-color: #F8F9FA">
+        <div class="col-xl-4 col-4">
+           <img src="media/images/logo.JPG">
+        </div>
+        <div class="col-xl-4 col-4" style="text-align: center;margin: auto">
+            <input class="input-medium search-query" type="text" /> <button type="submit" class="btn">查找</button>
+        </div>
+        <div class="col-xl-4 col-4">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="float: right;margin-right: 50px">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">视频</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                我的
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">我的足迹</a>
+                                <a class="dropdown-item" href="#">学习记录</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">我的钱包</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">关于</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-12">
+            <div class="carousel slide" id="carousel-172142">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carousel-172142">
+                    </li>
+                    <li data-slide-to="1" data-target="#carousel-172142">
+                    </li>
+                    <li data-slide-to="2" data-target="#carousel-172142">
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img alt="" src="https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp" />
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="https://p.qpic.cn/qqconadmin/0/b00f6c44f3604f86a2c05dfbb4d59e77/0?tp=webp" />
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img alt="" src="https://p.qpic.cn/qqconadmin/0/bdb32ec83aea489691188059f3926659/0?tp=webp" />
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+                <a data-slide="prev" href="#carousel-172142" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#carousel-172142" class="right carousel-control">›</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" v-for="vh in obj.data" style="margin-top: 20px">
+        <div class="col-xl-12 col-12" style="text-align: center;margin-bottom: 5px">
+            <h2>{{vh.name}}</h2>
+        </div>
+        <div class="col-xl-3 col-3" v-for="v in vh.videos">
+        <p style="text-align: center"><img :src="v.videoimgurl" class="vimg" width="90%"></p>
+            <p><a :href="v.videourl" >{{v.name}}</a></p>
+        <p style="margin-right: 10px;margin-left: 10px"><label style="float:left;">免费</label><label style="float: right">1806</label></p>
+        </div>
+
+    </div>
+    <!--<div class="row">
+        <div class="col-xl-12 col-12">
+            <h2>最受喜欢</h2>
+        </div>
+        <div class="col-xl-3 col-3" v-for="v in obj.data">
+            <p><img :src="v.videourl" class="vimg"></p>
+            <p>{{v.name}}</p>
+            <p><label style="float:left;">免费</label><label style="float: right">1806</label></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-12 col-12">
+            <h2>热销课程</h2>
+        </div>
+        <div class="col-xl-3 col-3" v-for="v in obj.data">
+            <p><img :src="v.videourl" class="vimg"></p>
+            <p>{{v.name}}</p>
+            <p><label style="float:left;">免费</label><label style="float: right">1806</label></p>
+        </div>
+    </div>-->
+    <div class="row">
+        <div style="border: 2px solid gray;margin-top: 10px;margin-bottom: 10px;text-align: center" class="col-12 col-xl-12">
+            <button class="btn btn-lg" style="padding: 5px">
+                查看更多<span class="glyphicon glyphicon glyphicon-menu-right" ></span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="application/javascript" src="media/js/vue.min.js"></script>
+<script type="application/javascript">
+    var appData=new Vue({
+        el:"#divData",
+        data:{
+            obj:{
+                data:[
+                    {
+                        name:"最新更新",
+                        videos:[
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            }
+                        ]
+                    },
+                    {
+                        name:"最受喜欢",
+                        videos:[
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },{
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            }
+                        ]
+                    },{
+                        name:"热销视频",
+                        videos:[
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:""
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            },
+                            {
+                                id:1,
+                                name:"Java之数组",
+                                videourl:"",
+                                videoimgurl:"https://p.qpic.cn/qqconadmin/0/28ebe46625f142e2a30997dec57c369a/0?tp=webp"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    })
+</script>
+</body>
+</html>

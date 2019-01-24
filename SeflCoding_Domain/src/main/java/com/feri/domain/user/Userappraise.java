@@ -28,9 +28,18 @@ public class Userappraise extends BaseEntity{
 
     private Integer score;
 
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
     private LocalDateTime createtime;
 
-    private Integer vid;
+    private Integer vid;//如果type为1 课程的id 为2就是视频的id
+    private Integer type;//类型 1表示 视频课程的评价  2表示视频评价
 
     public Integer getId() {
         return id;

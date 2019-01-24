@@ -13,4 +13,5 @@ public interface UserdetailService {
     //查询个人详情
     ResultVO queryById(String token);
 
+
 }

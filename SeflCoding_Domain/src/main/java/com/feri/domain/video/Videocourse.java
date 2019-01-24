@@ -17,9 +17,6 @@ import java.time.LocalDateTime;
  */
 @TableName("videocourse")
 public class Videocourse extends BaseEntity{
-
-    private static final long serialVersionUID = 1L;
-
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
@@ -39,6 +36,24 @@ public class Videocourse extends BaseEntity{
 
     private Integer vtid;
     private int vcount;
+    private String vcimgurl;
+    private String info;
+
+    public String getVcimgurl() {
+        return vcimgurl;
+    }
+
+    public void setVcimgurl(String vcimgurl) {
+        this.vcimgurl = vcimgurl;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
 
     public int getVcount() {
         return vcount;
@@ -100,16 +115,13 @@ public class Videocourse extends BaseEntity{
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
     public Integer getVtid() {
         return vtid;
     }
-
     public void setVtid(Integer vtid) {
         this.vtid = vtid;
     }
-
 }
